@@ -1,0 +1,9 @@
+{
+  "mean_predicted_ig": 0.08744768810956671,
+  "mean_realised_dh": 0.12956822294038642,
+  "n_pairs_posterior": 414,
+  "n_pairs_true": 414,
+  "pearson_posterior": 0.7847791143835022,
+  "pearson_true": 0.8410810686189876,
+  "spearman_true": 0.5016428806024561
+}

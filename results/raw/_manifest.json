@@ -1,0 +1,372 @@
+{
+  "completed_conditions": {
+    "compute": 18,
+    "information": 24,
+    "robustness": 150
+  },
+  "entries": [
+    {
+      "agent_cfg": {
+        "beta": 1.0,
+        "beta_warmup_steps": 0,
+        "cem_budget": 0.0,
+        "cem_elite": 20,
+        "cem_iters": 5,
+        "cem_pop": 120,
+        "cem_rollout_horizon": 3,
+        "horizon": 1,
+        "n_warmup_episodes": 3,
+        "name": "info_aware",
+        "plan_action_step": 4,
+        "seed": 0,
+        "warmup_steps": 40
+      },
+      "belief_cfg": {
+        "max_entropy_floor": 0.05,
+        "n_obs_samples": 24,
+        "obs_noise": 0.1,
+        "pose_obs_noise": 0.05,
+        "prior": "uniform"
+      },
+      "condition": "robustness",
+      "env_cfg": {
+        "action_phi_grid": [
+          36,
+          [
+            0.0,
+            40.0,
+            85.0
+          ],
+          [
+            false,
+            true
+          ]
+        ],
+        "contact_pressure_gain": 1.0,
+        "damping": 2.5,
+        "dt": 0.08,
+        "force_large": 7.0,
+        "force_levels": [
+          false,
+          true
+        ],
+        "force_small": 3.0,
+        "goal": [
+          0.0,
+          0.0
+        ],
+        "goal_tol": 0.2,
+        "max_force_n": 7.0,
+        "max_steps": 60,
+        "mu_kinetic": 0.5,
+        "mu_static": 0.5,
+        "n_contact_angles": 36,
+        "n_patches": 4,
+        "push_modes": [
+          0.0,
+          40.0,
+          85.0
+        ],
+        "rot_damping": 3.0,
+        "sensor_size": 2.0,
+        "start_radius_max": 1.6,
+        "start_radius_min": 0.8
+      },
+      "max_steps_override": null,
+      "methods": [
+        "greedy",
+        "info_aware",
+        "random"
+      ],
+      "model_cfg": {
+        "activation": "tanh",
+        "batch_size": 128,
+        "buffer_capacity": 4000,
+        "grad_clip": 1.0,
+        "hidden": [
+          192,
+          192
+        ],
+        "lr": 0.0005,
+        "n_ensemble": 5,
+        "n_epochs_per_update": 20,
+        "normalize_inputs": true,
+        "predict_std": false,
+        "update_every_steps": 3
+      },
+      "n_actions": 216,
+      "n_trials_per_seed": 5,
+      "noise_grid": [
+        0.0,
+        0.05,
+        0.15,
+        0.35,
+        0.6
+      ],
+      "object_cfg": {
+        "mass_grid": [
+          0.8,
+          1.5,
+          3.0
+        ],
+        "mu_grid": [
+          0.2,
+          0.5,
+          0.8
+        ],
+        "radius_grid": [
+          0.4,
+          1.0
+        ]
+      },
+      "seeds": [
+        0,
+        1
+      ],
+      "tactile_cfg": {
+        "noise_clip": 2.0,
+        "sigma_noise": 0.05,
+        "slip_reliability": 1.0
+      },
+      "timestamp": "2026-09-11T17:10:45"
+    },
+    {
+      "agent_cfg": {
+        "beta": 1.0,
+        "beta_warmup_steps": 0,
+        "cem_budget": 0.0,
+        "cem_elite": 20,
+        "cem_iters": 5,
+        "cem_pop": 120,
+        "cem_rollout_horizon": 3,
+        "horizon": 1,
+        "n_warmup_episodes": 3,
+        "name": "info_aware",
+        "plan_action_step": 4,
+        "seed": 0,
+        "warmup_steps": 40
+      },
+      "belief_cfg": {
+        "max_entropy_floor": 0.05,
+        "n_obs_samples": 24,
+        "obs_noise": 0.1,
+        "pose_obs_noise": 0.05,
+        "prior": "uniform"
+      },
+      "condition": "information",
+      "env_cfg": {
+        "action_phi_grid": [
+          36,
+          [
+            0.0,
+            40.0,
+            85.0
+          ],
+          [
+            false,
+            true
+          ]
+        ],
+        "contact_pressure_gain": 1.0,
+        "damping": 2.5,
+        "dt": 0.08,
+        "force_large": 7.0,
+        "force_levels": [
+          false,
+          true
+        ],
+        "force_small": 3.0,
+        "goal": [
+          0.0,
+          0.0
+        ],
+        "goal_tol": 0.2,
+        "max_force_n": 7.0,
+        "max_steps": 60,
+        "mu_kinetic": 0.5,
+        "mu_static": 0.5,
+        "n_contact_angles": 36,
+        "n_patches": 4,
+        "push_modes": [
+          0.0,
+          40.0,
+          85.0
+        ],
+        "rot_damping": 3.0,
+        "sensor_size": 2.0,
+        "start_radius_max": 1.6,
+        "start_radius_min": 0.8
+      },
+      "max_steps_override": null,
+      "methods": [
+        "random",
+        "greedy",
+        "cem",
+        "info_aware"
+      ],
+      "model_cfg": {
+        "activation": "tanh",
+        "batch_size": 128,
+        "buffer_capacity": 4000,
+        "grad_clip": 1.0,
+        "hidden": [
+          192,
+          192
+        ],
+        "lr": 0.0005,
+        "n_ensemble": 5,
+        "n_epochs_per_update": 20,
+        "normalize_inputs": true,
+        "predict_std": false,
+        "update_every_steps": 3
+      },
+      "n_actions": 216,
+      "n_trials_per_seed": 6,
+      "object_cfg": {
+        "mass_grid": [
+          0.8,
+          1.5,
+          3.0
+        ],
+        "mu_grid": [
+          0.2,
+          0.5,
+          0.8
+        ],
+        "radius_grid": [
+          0.4,
+          1.0
+        ]
+      },
+      "seeds": [
+        0
+      ],
+      "tactile_cfg": {
+        "noise_clip": 2.0,
+        "sigma_noise": 0.05,
+        "slip_reliability": 1.0
+      },
+      "timestamp": "2026-09-11T17:12:40"
+    },
+    {
+      "agent_cfg": {
+        "beta": 1.0,
+        "beta_warmup_steps": 0,
+        "cem_budget": 0.0,
+        "cem_elite": 20,
+        "cem_iters": 5,
+        "cem_pop": 120,
+        "cem_rollout_horizon": 3,
+        "horizon": 1,
+        "n_warmup_episodes": 3,
+        "name": "info_aware",
+        "plan_action_step": 4,
+        "seed": 0,
+        "warmup_steps": 40
+      },
+      "belief_cfg": {
+        "max_entropy_floor": 0.05,
+        "n_obs_samples": 24,
+        "obs_noise": 0.1,
+        "pose_obs_noise": 0.05,
+        "prior": "uniform"
+      },
+      "condition": "compute",
+      "env_cfg": {
+        "action_phi_grid": [
+          36,
+          [
+            0.0,
+            40.0,
+            85.0
+          ],
+          [
+            false,
+            true
+          ]
+        ],
+        "contact_pressure_gain": 1.0,
+        "damping": 2.5,
+        "dt": 0.08,
+        "force_large": 7.0,
+        "force_levels": [
+          false,
+          true
+        ],
+        "force_small": 3.0,
+        "goal": [
+          0.0,
+          0.0
+        ],
+        "goal_tol": 0.2,
+        "max_force_n": 7.0,
+        "max_steps": 60,
+        "mu_kinetic": 0.5,
+        "mu_static": 0.5,
+        "n_contact_angles": 36,
+        "n_patches": 4,
+        "push_modes": [
+          0.0,
+          40.0,
+          85.0
+        ],
+        "rot_damping": 3.0,
+        "sensor_size": 2.0,
+        "start_radius_max": 1.6,
+        "start_radius_min": 0.8
+      },
+      "max_steps_override": null,
+      "methods": [
+        "greedy",
+        "cem",
+        "info_aware"
+      ],
+      "model_cfg": {
+        "activation": "tanh",
+        "batch_size": 128,
+        "buffer_capacity": 4000,
+        "grad_clip": 1.0,
+        "hidden": [
+          192,
+          192
+        ],
+        "lr": 0.0005,
+        "n_ensemble": 5,
+        "n_epochs_per_update": 20,
+        "normalize_inputs": true,
+        "predict_std": false,
+        "update_every_steps": 3
+      },
+      "n_actions": 216,
+      "n_trials_per_seed": 6,
+      "object_cfg": {
+        "mass_grid": [
+          0.8,
+          1.5,
+          3.0
+        ],
+        "mu_grid": [
+          0.2,
+          0.5,
+          0.8
+        ],
+        "radius_grid": [
+          0.4,
+          1.0
+        ]
+      },
+      "seeds": [
+        0
+      ],
+      "tactile_cfg": {
+        "noise_clip": 2.0,
+        "sigma_noise": 0.05,
+        "slip_reliability": 1.0
+      },
+      "timestamp": "2026-09-11T17:13:57"
+    }
+  ],
+  "summary": "sweep runner summary",
+  "timestamp": "2026-09-11T17:13:57",
+  "total_records": 192
+}
